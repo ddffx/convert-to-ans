@@ -1,0 +1,13 @@
+{
+    "good_content": {
+        "skin": "thin",
+        "colors": ["red", "green", "yellow"],
+        "taste": 10,
+        "extra": "test"
+    },
+    "bad_content": {
+        "colors": ["brown"],
+        "taste": 0,
+        "worms": 2
+    }
+}
