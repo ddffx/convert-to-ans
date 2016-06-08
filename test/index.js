@@ -7,54 +7,86 @@ const _ = require('lodash');
 const Glob = require('glob-fs');
 const glob = new Glob();
 const path = require('path');
-
+const request = require('request');
+const util = require('util');
 chai.use(require('chai-json-schema'));
 
-
-// console.log(__dirname+'/fixtures');
 let files = glob.readdirSync('test/fixtures/**/*.json');
 // console.log(files);
-let filesC =_.groupBy(files, function(elem){
-	return _.last(path.dirname(elem).split('/'));
+let filesC = _.groupBy(files, function(elem) {
+    return _.last(path.dirname(elem).split('/'));
 });
 // console.log(filesC);
-describe(' ANS Tests', function() {
+// update schema from ur
 
-    describe('Validate types', function() {
-    	
-            
+// chai.tv4.dropSchemas();
+// console.log(chai.tv4.getSchemaUris());
+
+_(filesC).forEach((item, key) => {
+    let dir, schema, list;
+    dir = path.dirname(item[0]);
+    schema = JSON.parse(fs.readFileSync(dir + '/schema.json', 'utf8'));
+    chai.tv4.addSchema(schema);
+    list = chai.tv4.getMissingUris();
+    // console.log(list);
+    _(list).forEach(uri => {
+        console.log(util.format('loading schema %s', uri));
+        request(uri, function(err, response, schema) {
+            if (err) {
+                // console.log(err);
+                // throw err;
+            } else {
+                // console.log(schema);
+                try {
+                    chai.tv4.addSchema(uri, schema);
+                } catch (err) {
+                    throw err;
+                }
+
+            }
+
+        });
+    });
+});
+// make sure to run mocha command with --delay flag
+setTimeout(function() {
+    describe(' ANS Tests', function() {
+        describe('Validate types', function() {
+
+
             _(filesC).forEach(function(item, key) {
-            	// console.log(item);
-            	// console.log(key);
-            	let dir;
+                // console.log(item);
+                // console.log(key);
+                let dir;
                 let content_type = key;
                 // console.log(content_type);
                 dir = path.dirname(item[0]);
-               it(' should validate '+ content_type, function(done) {
+                it(' should validate ' + content_type, function(done) {
                     let content, schema;
                     // console.log(srcDirs);
                     content = JSON.parse(fs.readFileSync(dir + '/content.json', 'utf8'));
                     schema = JSON.parse(fs.readFileSync(dir + '/schema.json', 'utf8'));
                     // console.log(content);
                     // console.log(schema);
-                    expect(content.good_content).to.be.jsonSchema(schema);
-                    // expect(1).to.equal(1);
+                    expect(content).to.be.jsonSchema(schema);
                     done();
                 });
 
             });
-        
 
-    });
-    describe(' Convert', function() {
 
-        it('should return a string "hello"', function(done) {
-            
-            let result = convert.convert();
-            // console.log(result);
-            expect(result).to.equal('hello');
-            done();
         });
-    });
+        // describe(' Convert', function() {
 
-});
+        //     it('should return a string "hello"', function(done) {
+
+        //         let result = convert.convert();
+        //         // console.log(result);
+        //         expect(result).to.equal('hello');
+        //         done();
+        //     });
+        // });
+
+    });
+    run();
+}, 5000);
