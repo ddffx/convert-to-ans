@@ -51,5 +51,5 @@
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.5/traits/trait_content_elements.json"
     }
   },
-  "required": [ "type", "version" ]
+  "required": [ "type", "version"]
 }
