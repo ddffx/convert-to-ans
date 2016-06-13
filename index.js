@@ -10,28 +10,28 @@ const _parseHtml = content => {
     let mapped = _.map(elems, function(elem) {
         let out;
         // console.log('parse elem:' + elem.name);
-        if (elem.name.match(/^h\d$/)) {
-            // console.log('parse header: ' + elem.name);
-            out = elemParser.parseHeader(elem);
-        } else if (elem.name.match(/^(o|u)l$/)) {
-            // console.log('parse list: ' + elem.name);
-            out = elemParser.parseList(elem);
-        } else if (elem.name === 'p') {
-            // console.log('parse p: ' + elem.name);
-            out = elemParser.parsePTag(elem);
-        } else if (elem.name === 'blockquote') {
-            console.log('parse: ' + elem.name);
-            out = elemParser.parseBlockquote(elem);
-        } else{
-            out = elemParser.toRawHtml(elem);
+        if (elem.name) {
+            if (elem.name.match(/^h\d$/)) {
+                // console.log('parse header: ' + elem.name);
+                out = elemParser.parseHeader(elem);
+            } else if (elem.name.match(/^(o|u)l$/)) {
+                // console.log('parse list: ' + elem.name);
+                out = elemParser.parseList(elem);
+            } else if (elem.name === 'p') {
+                // console.log('parse p: ' + elem.name);
+                out = elemParser.parsePTag(elem);
+            } else if (elem.name === 'blockquote') {
+                // console.log('parse: ' + elem.name);
+                out = elemParser.parseBlockquote(elem);
+            } else {
+                out = elemParser.toRawHtml(elem);
+            }
         }
-
         if (out) {
             out._id = _.uniqueId();
+            return out;
         }
-
-
-        return out;
+        
     });
     // console.log(mapped);
     return mapped;
