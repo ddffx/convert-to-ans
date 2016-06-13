@@ -3,34 +3,45 @@ const _ = require('lodash');
 const cheerio = require('cheerio');
 const elemParser = require('./elem-parser');
 const _parseHtml = content => {
-	content = content.replace(/\n/gi, ''); // remove new lines;
-	console.log(content);
-	let elems = cheerio.parseHTML(content);
-	// console.log(elems);
-	let mapped = _.map(elems, function(elem){
-		let out;
-		
-		if(elem.name.match(/^h\d$/)){
-			out = elemParser.parseHeader(elem);
-		}
-		if(elem.name.match(/^(o|u)l$/)){
-			out = elemParser.parseList(elem);
-		}
-		if(out){
-			out._id = _.uniqueId();
-		}
-		
-		
-		return out;
-	});
-	// console.log(mapped);
-	return mapped;
+    content = content.replace(/\n/gi, ''); // remove new lines;
+    // console.log(content);
+    let elems = cheerio.parseHTML(content);
+    // console.log(elems);
+    let mapped = _.map(elems, function(elem) {
+        let out;
+        // console.log('parse elem:' + elem.name);
+        if (elem.name.match(/^h\d$/)) {
+            // console.log('parse header: ' + elem.name);
+            out = elemParser.parseHeader(elem);
+        } else if (elem.name.match(/^(o|u)l$/)) {
+            // console.log('parse list: ' + elem.name);
+            out = elemParser.parseList(elem);
+        } else if (elem.name === 'p') {
+            // console.log('parse p: ' + elem.name);
+            out = elemParser.parsePTag(elem);
+        } else if (elem.name === 'blockquote') {
+            console.log('parse: ' + elem.name);
+            out = elemParser.parseBlockquote(elem);
+        } else{
+            out = elemParser.toRawHtml(elem);
+        }
+
+        if (out) {
+            out._id = _.uniqueId();
+        }
+
+
+        return out;
+    });
+    // console.log(mapped);
+    return mapped;
 };
 
 exports.parse = (payload, opts, cb) => {
     // make sure input parama present
     let result = {},
-        input, ansType, props, req_props, errFields = [], $;
+        input, ansType, props, req_props, errFields = [],
+        $;
     if (_.isEmpty(payload) || _.isEmpty(opts)) {
         return cb(new Error('payload and type required'), null);
     }
@@ -45,12 +56,12 @@ exports.parse = (payload, opts, cb) => {
         }
     });
     // update version if available
-    if(opts.schema.version){
-    	result.version = opts.schema.version;
+    if (opts.schema.version) {
+        result.version = opts.schema.version;
     }
     // update type if available
-    if(opts.schema.type){
-    	result.type = opts.schema.version;
+    if (opts.schema.type) {
+        result.type = opts.schema.version;
     }
 
     // parse payload body
@@ -59,14 +70,14 @@ exports.parse = (payload, opts, cb) => {
 
     // make sure required pros are there.
     _(req_props).forEach(prop => {
-        if(_.isEmpty(result[prop])) {
+        if (_.isEmpty(result[prop])) {
             errFields.push(prop);
         }
     });
-    
-    if(errFields.length > 0){
-    	let msg = errFields.join(',') + ' missing';
-    	return cb (new Error(msg), null);
+
+    if (errFields.length > 0) {
+        let msg = errFields.join(',') + ' missing';
+        return cb(new Error(msg), null);
     }
     console.log(result);
     return cb(null, result);
