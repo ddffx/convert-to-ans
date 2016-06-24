@@ -8,4 +8,6 @@ services:
       dockerfile: ./Dockerfile
     volumes:
       - ./:/home/code
+    # environment:
+    #   NODE_DEBUG: ans
     

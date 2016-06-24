@@ -1,6 +1,6 @@
 {
   "name": "convert-to-ans",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Node module for converting html content to ANS (Arc Native Content) format",
   "main": "index.js",
   "scripts": {
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/ddffx/convert-to-ans#readme",
   "dependencies": {
+    "bulk-require": "^1.0.0",
     "cheerio": "^0.20.0",
     "glob-fs": "^0.1.6",
     "lodash": "^4.13.1",

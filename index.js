@@ -1,9 +1,17 @@
 'use strict';
 const _ = require('lodash');
 const cheerio = require('cheerio');
-const elemParser = require('./elem-parser');
+const util = require('util');
+const debuglog = util.debuglog('ans');
+const bulk = require('bulk-require');
+const lib = bulk(__dirname + '/lib', ['parsers/**/*.js', '**/*.js']);
+debuglog(lib);
+const parsers = lib.parsers;
+
 const _parseHtml = content => {
     content = content.replace(/\n/gi, ''); // remove new lines;
+    // replace blank p tags
+
     // console.log(content);
     let elems = cheerio.parseHTML(content);
     // console.log(elems);
@@ -11,27 +19,24 @@ const _parseHtml = content => {
         let out;
         // console.log('parse elem:' + elem.name);
         if (elem.name) {
-            if (elem.name.match(/^h\d$/)) {
-                // console.log('parse header: ' + elem.name);
-                out = elemParser.parseHeader(elem);
-            } else if (elem.name.match(/^(o|u)l$/)) {
-                // console.log('parse list: ' + elem.name);
-                out = elemParser.parseList(elem);
-            } else if (elem.name === 'p') {
-                // console.log('parse p: ' + elem.name);
-                out = elemParser.parsePTag(elem);
-            } else if (elem.name === 'blockquote') {
-                // console.log('parse: ' + elem.name);
-                out = elemParser.parseBlockquote(elem);
+            if (parsers[elem.name]) {
+                out = parsers[elem.name].parse(elem);
             } else {
-                out = elemParser.toRawHtml(elem);
+
+                if (elem.name.match(/^h\d$/)) {
+                    out = parsers['header'].parse(elem);
+                } else if (elem.name.match(/^(o|u)l$/)) {
+                    out = parsers['list'].parse(elem);
+                } else {
+                    out = parsers['rawhtml'].parse(elem);
+                }
             }
         }
         if (out) {
             out._id = _.uniqueId();
             return out;
         }
-        
+
     });
     // console.log(mapped);
     return mapped;
@@ -79,6 +84,6 @@ exports.parse = (payload, opts, cb) => {
         let msg = errFields.join(',') + ' missing';
         return cb(new Error(msg), null);
     }
-    console.log(result);
+    // debuglog(result);
     return cb(null, result);
 };
