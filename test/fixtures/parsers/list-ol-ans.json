@@ -1,0 +1,31 @@
+{
+    "list_type": "ordered_list",
+    "additional_properties": {
+    	"class": "test", "id": "1234"
+    },
+    "items": [
+
+        {
+            "additional_properties": {},
+            "content": "1",
+            "type": "text"
+        }, {
+            "additional_properties": {},
+            "content": "a",
+            "type": "text"
+        } ,{
+            "additional_properties": {},
+            "content": "2",
+            "type": "text"
+        } ,{
+            "additional_properties": {},
+            "content": "3",
+            "type": "text"
+        }, {
+            "additional_properties": {},
+            "content": "b",
+            "type": "text"
+        }
+
+    ]
+}

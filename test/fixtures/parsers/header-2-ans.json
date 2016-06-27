@@ -1,0 +1,10 @@
+{
+	"type": "header",
+	"level": "2",
+	"additional_properties": {
+		"class": "test",
+		"id": "1234",
+		"style": "font-size:14px;"
+	},
+	"content":" I am headline h2"
+}

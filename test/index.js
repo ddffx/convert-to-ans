@@ -9,6 +9,7 @@ const glob = new Glob();
 const path = require('path');
 const request = require('request');
 const util = require('util');
+const debuglog = util.debuglog('ans');
 chai.use(require('chai-json-schema'));
 
 // let files = glob.readdirSync('test/fixtures/**/*.json');
