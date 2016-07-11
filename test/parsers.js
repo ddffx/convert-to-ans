@@ -31,7 +31,7 @@ describe(' Parse html into ans format ', function() {
         let cnt_file = path.basename(item, '.html');
         let parser = cnt_file.indexOf('-')> 0 ? cnt_file.split('-')[0]: cnt_file;
         let dir = path.dirname(item);
-        console.log(parser);
+        // console.log(parser);
         it(' should parse tag: ' + cnt_file, function(done) {
             let cnt_src = item;
             let res_src = dir+'/' + cnt_file + '-ans.json';
@@ -64,7 +64,7 @@ describe(' Parse wordpress elements into ans format ', function() {
             debuglog(cnt);
             let res = JSON.parse(fs.readFileSync(res_src, 'utf8'));
             let parsed = parsers[parser].parse(cnt);
-            console.log(parsed);
+            // console.log(parsed);
             expect(parsed).to.deep.equal(res);
             done();
         });

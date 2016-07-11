@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/ddffx/convert-to-ans#readme",
   "dependencies": {
+    "async": "^2.0.0-rc.6",
     "bulk-require": "^1.0.0",
     "cheerio": "^0.20.0",
     "glob-fs": "^0.1.6",

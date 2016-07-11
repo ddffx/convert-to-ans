@@ -1,13 +1,15 @@
 'use strict';
 const _ = require('lodash');
 const cheerio = require('cheerio');
+const async = require('async');
 const util = require('util');
 const debuglog = util.debuglog('ans');
 const bulk = require('bulk-require');
-const lib = bulk(__dirname + '/lib', ['parsers/**/*.js', '**/*.js']);
-debuglog(lib);
-const parsers = lib.parsers;
-
+const lib_p = bulk(__dirname + '/lib', ['parsers/**/*.js', '**/*.js']);
+const lib_i = bulk(__dirname + '/lib', ['inflators/**/*.js', '**/*.js']);
+debuglog(lib_p);
+const parsers = lib_p.parsers;
+const inflators = lib_i.inflators;
 const _parseHtml = content => {
     content = content.replace(/\n/gi, ''); // remove new lines;
     // replace blank p tags
@@ -41,15 +43,14 @@ const _parseHtml = content => {
     // console.log(mapped);
     return mapped;
 };
-const _parseTitle = (titleObj) =>{
+const _parseTitle = (titleObj) => {
     return parsers['title'].parse(titleObj);
 };
 
-exports.parse = (payload, opts, cb) => {
-    // make sure input parama present
+const _prepareResult = (payload, opts, cb) => {
     let result = {},
-        input, ansType, props, req_props, errFields = [],
-        $;
+        input, ansType, props, req_props, errFields = [];
+    // make sure input param present
     if (_.isEmpty(payload) || _.isEmpty(opts)) {
         return cb(new Error('payload and type required'), null);
     }
@@ -72,8 +73,15 @@ exports.parse = (payload, opts, cb) => {
         result.type = opts.schema.version;
     }
     // parse title
-    if(payload.title){
+    if (payload.title) {
         _.assign(result, _parseTitle(payload));
+    }
+    // dates
+    if (payload.date) {
+        result['created_date'] = payload.date;
+    }
+    if (payload.modified) {
+        result['last_updated_date'] = payload.modified;
     }
     // parse payload body
     result['content_elements'] = _parseHtml(payload.content.rendered);
@@ -90,6 +98,35 @@ exports.parse = (payload, opts, cb) => {
         let msg = errFields.join(',') + ' missing';
         return cb(new Error(msg), null);
     }
-    debuglog(result);
+    // debuglog(result);
     return cb(null, result);
+};
+
+exports.parse = (payload, opts, cb) => {
+
+    async.parallel([
+        // prepare 
+        async.apply(_prepareResult, payload, opts),
+        // inflate authors, returns all authors of the content in an array
+        async.apply(inflators['author'].inflate, payload) 
+        // inflate feature image
+    ], (err, results) => {
+        // console.log(results);
+        let output = _.find(results,'title');
+        let authors = _.find(results,'authors');
+        // _.assign(output,_.find(results,'authors'));
+        if(authors){
+            output['credits'] = [authors];
+        }
+        
+        
+        if (err) {
+            cb(err, null);
+        } else {
+            debuglog(output);
+            return cb(null, output);
+        }
+    });
+
+
 };
