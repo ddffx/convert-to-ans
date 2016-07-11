@@ -12,12 +12,12 @@ const util = require('util');
 const debuglog = util.debuglog('ans');
 chai.use(require('chai-json-schema'));
 
-// let files = glob.readdirSync('test/fixtures/**/*.json');
+// let files = glob.readdirSync('test/fixtures/blog/**/*.json');
 // // console.log(files);
 // let filesC = _.groupBy(files, function(elem) {
 //     return _.last(path.dirname(elem).split('/'));
 // });
-// // console.log(filesC);
+// console.log(filesC);
 // // update schema from ur
 
 // // chai.tv4.dropSchemas();
@@ -69,7 +69,7 @@ chai.use(require('chai-json-schema'));
 //                     schema = JSON.parse(fs.readFileSync(dir + '/schema.json', 'utf8'));
 //                     // console.log(content);
 //                     // console.log(schema);
-//                     expect(content).to.be.jsonSchema(schema);
+//                     expect(parsed).to.be.jsonSchema(schema);
 //                     done();
 //                 });
 

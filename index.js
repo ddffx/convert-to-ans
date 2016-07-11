@@ -41,6 +41,9 @@ const _parseHtml = content => {
     // console.log(mapped);
     return mapped;
 };
+const _parseTitle = (titleObj) =>{
+    return parsers['title'].parse(titleObj);
+};
 
 exports.parse = (payload, opts, cb) => {
     // make sure input parama present
@@ -68,12 +71,15 @@ exports.parse = (payload, opts, cb) => {
     if (opts.schema.type) {
         result.type = opts.schema.version;
     }
-
+    // parse title
+    if(payload.title){
+        _.assign(result, _parseTitle(payload));
+    }
     // parse payload body
     result['content_elements'] = _parseHtml(payload.content.rendered);
 
 
-    // make sure required pros are there.
+    // make sure required props are there.
     _(req_props).forEach(prop => {
         if (_.isEmpty(result[prop])) {
             errFields.push(prop);
@@ -84,6 +90,6 @@ exports.parse = (payload, opts, cb) => {
         let msg = errFields.join(',') + ' missing';
         return cb(new Error(msg), null);
     }
-    // debuglog(result);
+    debuglog(result);
     return cb(null, result);
 };
