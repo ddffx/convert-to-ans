@@ -1,0 +1,107 @@
+{ "id": 416, 
+"date": "2016-07-14T02:30:06", 
+"date_gmt": "2016-07-14T02:30:06", 
+"guid": { 
+	"rendered": "https:\/\/dev-liveblog.wpit.nile.works\/wp-content\/uploads\/2016\/07\/ptime_test_img_1468463402119.jpeg" 
+}, 
+"modified": "2016-07-14T02:30:06", 
+"modified_gmt": "2016-07-14T02:30:06", 
+"slug": "ptime_test_img_1468463402119", 
+"type": "attachment", 
+"link": "https:\/\/dev-liveblog.wpit.nile.works\/ptime_test_img_1468463402119\/", 
+"title": { "rendered": "ptime_test_img_1468463402119" }, 
+"author": 4, 
+"comment_status": "open", 
+"ping_status": "closed", 
+"alt_text": "", 
+"caption": "", 
+"description": "", 
+"media_type": "image", 
+"mime_type": "image\/jpeg", 
+"media_details": { 
+	"width": 800, 
+	"height": 480, 
+	"file": "2016\/07\/ptime_test_img_1468463402119.jpeg", 
+	"sizes": { 
+		"thumbnail": { 
+			"file": "ptime_test_img_1468463402119-150x150.jpeg", 
+			"width": 150, 
+			"height": 150, 
+			"mime_type": "image\/jpeg", 
+			"source_url": "https:\/\/dev-liveblog.wpit.nile.works\/wp-content\/uploads\/2016\/07\/ptime_test_img_1468463402119-150x150.jpeg" 
+		}, 
+		"medium": { 
+			"file": "ptime_test_img_1468463402119-300x180.jpeg", 
+			"width": 300, 
+			"height": 180, 
+			"mime_type": "image\/jpeg", 
+			"source_url": "https:\/\/dev-liveblog.wpit.nile.works\/wp-content\/uploads\/2016\/07\/ptime_test_img_1468463402119-300x180.jpeg" 
+		}, 
+		"medium_large": { 
+			"file": "ptime_test_img_1468463402119-768x461.jpeg", 
+			"width": 768, 
+			"height": 461, 
+			"mime_type": "image\/jpeg", 
+			"source_url": "https:\/\/dev-liveblog.wpit.nile.works\/wp-content\/uploads\/2016\/07\/ptime_test_img_1468463402119-768x461.jpeg" 
+		}, 
+		"guest-author-32": { 
+			"file": "ptime_test_img_1468463402119-32x32.jpeg", 
+			"width": 32, 
+			"height": 32, 
+			"mime_type": "image\/jpeg", 
+			"source_url": "https:\/\/dev-liveblog.wpit.nile.works\/wp-content\/uploads\/2016\/07\/ptime_test_img_1468463402119-32x32.jpeg" 
+		}, 
+		"guest-author-50": { 
+			"file": "ptime_test_img_1468463402119-50x50.jpeg", 
+			"width": 50, 
+			"height": 50, 
+			"mime_type": "image\/jpeg", 
+			"source_url": "https:\/\/dev-liveblog.wpit.nile.works\/wp-content\/uploads\/2016\/07\/ptime_test_img_1468463402119-50x50.jpeg" 
+		}, 
+		"guest-author-64": {
+		 "file": "ptime_test_img_1468463402119-64x64.jpeg", 
+		 "width": 64, 
+		 "height": 64, 
+		 "mime_type": "image\/jpeg", 
+		 "source_url": "https:\/\/dev-liveblog.wpit.nile.works\/wp-content\/uploads\/2016\/07\/ptime_test_img_1468463402119-64x64.jpeg" 
+		}, 
+		"guest-author-96": { 
+			"file": "ptime_test_img_1468463402119-96x96.jpeg", 
+			"width": 96, 
+			"height": 96, 
+			"mime_type": "image\/jpeg", 
+			"source_url": "https:\/\/dev-liveblog.wpit.nile.works\/wp-content\/uploads\/2016\/07\/ptime_test_img_1468463402119-96x96.jpeg" 
+		}, 
+		"guest-author-128": { 
+			"file": "ptime_test_img_1468463402119-128x128.jpeg", 
+			"width": 128, 
+			"height": 128, 
+			"mime_type": "image\/jpeg", 
+			"source_url": "https:\/\/dev-liveblog.wpit.nile.works\/wp-content\/uploads\/2016\/07\/ptime_test_img_1468463402119-128x128.jpeg" 
+		}, 
+		"full": { 
+			"file": "ptime_test_img_1468463402119.jpeg", 
+			"width": 800, 
+			"height": 480, 
+			"mime_type": "image\/jpeg", 
+			"source_url": "https:\/\/dev-liveblog.wpit.nile.works\/wp-content\/uploads\/2016\/07\/ptime_test_img_1468463402119.jpeg" 
+		} 
+	}, 
+	"image_meta": { 
+		"aperture": "0", 
+		"credit": "", 
+		"camera": "", 
+		"caption": "", 
+		"created_timestamp": "0", 
+		"copyright": "", 
+		"focal_length": "0", 
+		"iso": "0", 
+		"shutter_speed": "0", 
+		"title": "", 
+		"orientation": "0", 
+		"keywords": [] 
+	} 
+}, 
+"post": null, 
+"source_url": "https:\/\/dev-liveblog.wpit.nile.works\/wp-content\/uploads\/2016\/07\/ptime_test_img_1468463402119.jpeg", 
+"_links": { "self": [{ "href": "https:\/\/dev-liveblog.wpit.nile.works\/wp-json\/wp\/v2\/media\/416" }], "collection": [{ "href": "https:\/\/dev-liveblog.wpit.nile.works\/wp-json\/wp\/v2\/media" }], "about": [{ "href": "https:\/\/dev-liveblog.wpit.nile.works\/wp-json\/wp\/v2\/types\/attachment" }], "author": [{ "embeddable": true, "href": "https:\/\/dev-liveblog.wpit.nile.works\/wp-json\/wp\/v2\/users\/4" }], "replies": [{ "embeddable": true, "href": "https:\/\/dev-liveblog.wpit.nile.works\/wp-json\/wp\/v2\/comments?post=416" }] } }

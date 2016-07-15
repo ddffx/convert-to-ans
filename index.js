@@ -108,8 +108,9 @@ exports.parse = (payload, opts, cb) => {
         // prepare 
         async.apply(_prepareResult, payload, opts),
         // inflate authors, returns all authors of the content in an array
-        async.apply(inflators['author'].inflate, payload) 
-        // inflate feature image
+        async.apply(inflators['author'].inflate, payload), 
+        // inflate featured media
+        async.apply(inflators['featured_media'].inflate, payload) 
     ], (err, results) => {
         // console.log(results);
         let output = _.find(results,'title');

@@ -56,7 +56,7 @@ describe(' Parse wordpress elements into ans format ', function() {
         let cnt_file = path.basename(item, '.json').split('-')[0]; // remove src
         let parser = cnt_file.indexOf('-')> 0 ? cnt_file.split('-')[0]: cnt_file;
         let dir = path.dirname(item);
-        // console.log(parser);
+        console.log(parser);
         it(' should parse : ' + cnt_file, function(done) {
             let cnt_src = item;
             let res_src = dir+'/' + cnt_file + '-ans.json';
