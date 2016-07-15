@@ -116,8 +116,13 @@ exports.parse = (payload, opts, cb) => {
         let output = _.find(results,'title');
         let authors = _.find(results,'authors');
         // _.assign(output,_.find(results,'authors'));
+        let featured_media = _.find(results,'featured_media');
         if(authors){
             output['credits'] = [authors];
+        }
+
+        if(featured_media) {
+            output['featured_media'] = [featured_media];
         }
         
         
