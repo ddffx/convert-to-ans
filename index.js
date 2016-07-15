@@ -118,11 +118,13 @@ exports.parse = (payload, opts, cb) => {
         // _.assign(output,_.find(results,'authors'));
         let featured_media = _.find(results,'featured_media');
         if(authors){
+            console.log('attaching authors in transform')
             output['credits'] = [authors];
         }
 
         if(featured_media) {
-            output['featured_media'] = [featured_media];
+            console.log('attaching featured media in transform')
+             _.assign(output,featured_media);
         }
         
         
