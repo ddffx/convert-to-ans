@@ -1,0 +1,23 @@
+{
+    "meta":{
+    	"game_id":"",
+    	"sport":"",
+    	"sidebar_include":"",
+    	"header_title":"",
+    	"header_image":"",
+    	"header_theme":"dark",
+    	"header_deck":"",
+    	"aboutName":"",
+    	"aboutSameAs":"",
+    	"aboutAddressCountry":"",
+    	"aboutStreetAddress":"",
+    	"aboutAddressLocality":"",
+    	"aboutAddressRegion":"",
+    	"aboutPostalCode":"",
+    	"coverageEndDate":"",
+    	"coverageEndTime":"",
+    	"liveBlogVideoThumbnail":"",
+        "entry_important": "0",
+    	"sticky": true
+    }
+}
