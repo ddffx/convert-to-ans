@@ -43,6 +43,7 @@ const _parseHtml = content => {
     // console.log(mapped);
     return mapped;
 };
+// depreciation candidate
 const _parseTitle = (titleObj) => {
     return parsers['title'].parse(titleObj);
 };
@@ -57,7 +58,7 @@ const _prepareResult = (payload, opts, cb) => {
     // initialize object properties based on schema
     props = _.keys(opts.schema.definition.properties);
     req_props = opts.schema.required;
-    // console.log(props);
+    console.log(props);
 
     _(props).forEach(prop => {
         if (!_.isUndefined(payload[prop]) || !_.isEmpty(payload[prop])) {
@@ -74,7 +75,8 @@ const _prepareResult = (payload, opts, cb) => {
     }
     // parse title
     if (payload.title) {
-        _.assign(result, _parseTitle(payload));
+        _.assign(result, _parseTitle(payload)); // will be depricate
+        _.assign(result, parsers['headlines'].parse(payload));
     }
     // dates
     if (payload.date) {
@@ -82,6 +84,9 @@ const _prepareResult = (payload, opts, cb) => {
     }
     if (payload.modified) {
         result['last_updated_date'] = payload.modified;
+    }
+    if(payload.meta){
+        _.assign(result, parsers['meta'].parse(payload));
     }
     // parse payload body
     result['content_elements'] = _parseHtml(payload.content.rendered);
