@@ -25,6 +25,7 @@
     "bulk-require": "^1.0.0",
     "cheerio": "^0.20.0",
     "glob-fs": "^0.1.6",
+    "he": "^1.1.0",
     "lodash": "^4.13.1",
     "node-dir": "^0.1.12",
     "request": "^2.72.0"

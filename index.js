@@ -5,11 +5,14 @@ const async = require('async');
 const util = require('util');
 const debuglog = util.debuglog('ans');
 const bulk = require('bulk-require');
-const lib_p = bulk(__dirname + '/lib', ['parsers/**/*.js', '**/*.js']);
+
 const lib_i = bulk(__dirname + '/lib', ['inflators/**/*.js', '**/*.js']);
-debuglog(lib_p);
-const parsers = lib_p.parsers;
+
+
 const inflators = lib_i.inflators;
+const lib_h = bulk(__dirname + '/lib', ['helpers/**/*.js', '**/*.js']);
+const helpers = lib_h.helpers;
+// console.log(helpers);
 const _parseHtml = content => {
     content = content.replace(/\n/gi, ''); // remove new lines;
     // replace blank p tags
@@ -18,23 +21,13 @@ const _parseHtml = content => {
     let elems = cheerio.parseHTML(content);
     // console.log(elems);
     let mapped = _.map(elems, function(elem) {
-        let out;
-        // console.log('parse elem:' + elem.name);
-        if (elem.name) {
-            if (parsers[elem.name]) {
-                out = parsers[elem.name].parse(elem);
-            } else {
-
-                if (elem.name.match(/^h\d$/)) {
-                    out = parsers['header'].parse(elem);
-                } else if (elem.name.match(/^(o|u)l$/)) {
-                    out = parsers['list'].parse(elem);
-                } else {
-                    out = parsers['rawhtml'].parse(elem);
-                }
-            }
-        }
+        let out, parser;
+        // select a parser, involves all kinds of logic, returns a parse function form parser library
+        parser = helpers.selectParser(elem);
+        // console.log(parser);
+        out = parser.parse(elem);
         if (out) {
+            // assign a local unique id
             out._id = _.uniqueId();
             return out;
         }
@@ -43,10 +36,10 @@ const _parseHtml = content => {
     // console.log(mapped);
     return mapped;
 };
-// depreciation candidate
-const _parseTitle = (titleObj) => {
-    return parsers['title'].parse(titleObj);
-};
+// // depreciation candidate
+// const _parseTitle = (titleObj) => {
+//     return parsers['title'].parse(titleObj);
+// };
 
 const _prepareResult = (payload, opts, cb) => {
     let result = {},
@@ -58,7 +51,7 @@ const _prepareResult = (payload, opts, cb) => {
     // initialize object properties based on schema
     props = _.keys(opts.schema.definition.properties);
     req_props = opts.schema.required;
-    console.log(props);
+    // console.log(props);
 
     _(props).forEach(prop => {
         if (!_.isUndefined(payload[prop]) || !_.isEmpty(payload[prop])) {
@@ -75,8 +68,8 @@ const _prepareResult = (payload, opts, cb) => {
     }
     // parse title
     if (payload.title) {
-        _.assign(result, _parseTitle(payload)); // will be depricate
-        _.assign(result, parsers['headlines'].parse(payload));
+        // _.assign(result, _parseTitle(payload)); // will be depricate
+        _.assign(result, helpers.selectParser('headlines').parse(payload));
     }
     // dates
     if (payload.date) {
@@ -85,12 +78,17 @@ const _prepareResult = (payload, opts, cb) => {
     if (payload.modified) {
         result['last_updated_date'] = payload.modified;
     }
-    if(payload.meta){
-        _.assign(result, parsers['meta'].parse(payload));
+    if (payload.meta) {
+        _.assign(result, helpers.selectParser('meta').parse(payload));
     }
     // parse payload body
     result['content_elements'] = _parseHtml(payload.content.rendered);
 
+    // update ombeds in the content elements are copying them form meta section
+    if (payload.meta) {
+        
+        result['content_elements'] = helpers.replaceOembeds(result['content_elements'], payload.meta);
+    }
 
     // make sure required props are there.
     _(req_props).forEach(prop => {
@@ -113,29 +111,27 @@ exports.parse = (payload, opts, cb) => {
         // prepare 
         async.apply(_prepareResult, payload, opts),
         // inflate authors, returns all authors of the content in an array
-        async.apply(inflators['author'].inflate, payload), 
+        async.apply(inflators['author'].inflate, payload),
         // inflate featured media
-        async.apply(inflators['featured_media'].inflate, payload) 
+        async.apply(inflators['featured_media'].inflate, payload)
     ], (err, results) => {
-        // console.log(results);
-        let output = _.find(results,'title');
-        let authors = _.find(results,'authors');
-        // _.assign(output,_.find(results,'authors'));
-        let featured_media = _.find(results,'featured_media');
-        if(authors){
-            console.log('attaching authors in transform')
-            output['credits'] = [authors];
-        }
-
-        if(featured_media) {
-            console.log('attaching featured media in transform')
-             _.assign(output,featured_media);
-        }
-        
-        
+        let output, authors, featured_media;
         if (err) {
             cb(err, null);
         } else {
+            // console.log(results);
+            output = _.find(results, 'headlines');
+            authors = _.find(results, 'authors');
+            featured_media = _.find(results, 'featured_media');
+            if (authors) {
+                console.log('attaching authors in transform');
+                output['credits'] = [authors];
+            }
+
+            if (featured_media) {
+                console.log('attaching featured media in transform');
+                _.assign(output, featured_media);
+            }
             debuglog(output);
             return cb(null, output);
         }

@@ -39,7 +39,7 @@ describe(' Inflate wordpress elements into ans format ', function() {
             let res = JSON.parse(fs.readFileSync(res_src, 'utf8'));
             inflators[inflator].inflate(cnt, function(err, inflated) {
                 if (err) {
-                    console.log(err)
+                    console.log(err);
                     done();
                 } else {
                     // console.log(inflated);

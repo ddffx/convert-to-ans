@@ -1,52 +1,124 @@
 {
-    "id": 327,
-    "date": "2016-07-06T21:09:42",
-    "date_gmt": "2016-07-06T21:09:42",
-    "guid": { "rendered": "https:\/\/dev-liveblog.wpit.nile.works\/2016\/live-updates\/uncategorized\/ipsum-commodo-ad-mollit-qui\/irure-deserunt-in-dolore-qui\/" },
-    "modified": "2016-07-06T21:09:42",
-    "modified_gmt": "2016-07-06T21:09:42",
-    "slug": "irure-deserunt-in-dolore-qui",
-    "type": "post",
-    "link": "https:\/\/dev-liveblog.wpit.nile.works\/2016\/live-updates\/early-lead-live\/ipsum-commodo-ad-mollit-qui\/irure-deserunt-in-dolore-qui\/",
-    "title": { "rendered": "irure deserunt in dolore qui" },
-    "content": { "rendered": "<h1>amet velit deserunt non dolor<\/h1>\n<p>Aliqua enim duis veniam eu est Lorem adipisicing ullamco adipisicing ipsum laboris veniam irure. Officia dolor excepteur pariatur dolor ullamco exercitation dolore proident. Aliqua non eu aliquip deserunt enim eiusmod dolore mollit ullamco aute eu. In sit consequat ex deserunt amet amet. Veniam quis non incididunt excepteur elit. Occaecat aliqua aute sit minim nostrud deserunt elit officia tempor tempor reprehenderit reprehenderit nostrud pariatur.<\/p>\n<p>Cillum duis quis amet adipisicing excepteur cupidatat dolore aliquip eiusmod dolor nulla. Amet voluptate elit quis dolor eiusmod ipsum eiusmod magna sint. Voluptate est quis proident cillum. Ut nulla elit amet eu id irure voluptate non. Sint duis ad incididunt qui reprehenderit.<\/p>\n<blockquote cite=\"http:\/\/www.google.com\"><p>Ad ipsum do consectetur voluptate occaecat occaecat dolor velit labore aliqua ad. Quis cupidatat sunt labore nostrud magna eu.<\/p><\/blockquote>\n<h2>cupidatat eiusmod consectetur amet dolore labore<\/h2>\n<ol>\n<li>proident quis aliqua non incididunt<\/li>\n<li>laboris ad deserunt ea labore<\/li>\n<li>enim quis consectetur occaecat exercitation<\/li>\n<li>laborum dolor nostrud labore veniam<\/li>\n<li>enim magna et ut ad<\/li>\n<\/ol>\n<h3>et ex deserunt occaecat eu aliquip laborum adipisicing<\/h3>\n<p>Aliquip ipsum consequat occaecat consectetur proident Lorem eiusmod quis. Voluptate ex dolore et cupidatat excepteur non. Ea culpa excepteur quis pariatur velit eiusmod officia velit reprehenderit amet dolore nostrud amet. Sunt do quis officia labore consectetur qui ut Lorem non consectetur anim minim laborum deserunt.<\/p>\n<h4>ipsum veniam laboris et esse ex non sit<\/h4>\n<ul>\n<li>irure Lorem sint occaecat consectetur<\/li>\n<li>elit consectetur eu qui pariatur<\/li>\n<li>aute proident deserunt ad quis<\/li>\n<li>ad mollit dolor qui reprehenderit<\/li>\n<li>nostrud dolore ad fugiat nostrud<\/li>\n<\/ul>\n<h5>ullamco eu fugiat eu qui voluptate deserunt et mollit dolor<\/h5>\n<p><img src=\"http:\/\/lorempixel.com\/300\/200\/food?82572\" \/>\n<div class=\"test live-blog\">\n<h2>ad dolor qui deserunt do laboris<\/h2>\n<p>Incididunt anim deserunt cupidatat eiusmod esse eu ut irure. Eiusmod adipisicing fugiat esse proident. Ea ad incididunt ipsum adipisicing commodo.<\/p>\n<ul>\n<li>quis laborum irure quis cupidatat<\/li>\n<li>ullamco nostrud consectetur cillum officia<\/li>\n<\/ul>\n<\/div>\n<p>[tweet https:\/\/twitter.com\/washingtonpost\/status\/750798531229786112]<\/p>\n" },
-    "excerpt": { "rendered": "<p>amet velit deserunt non dolor Aliqua enim duis veniam eu est Lorem adipisicing ullamco adipisicing ipsum laboris veniam irure. Officia dolor excepteur pariatur dolor ullamco exercitation dolore proident. Aliqua non eu aliquip deserunt enim eiusmod dolore mollit ullamco aute eu. In sit consequat ex deserunt amet amet. Veniam quis non incididunt excepteur elit. Occaecat aliqua &hellip; <a href=\"https:\/\/dev-liveblog.wpit.nile.works\/2016\/live-updates\/early-lead-live\/ipsum-commodo-ad-mollit-qui\/irure-deserunt-in-dolore-qui\/\" class=\"more-link\">Continue reading<span class=\"screen-reader-text\"> &#8220;irure deserunt in dolore qui&#8221;<\/span><\/a><\/p>\n" },
-    "author": [{
-        "id": 4,
-        "slug": "primetimenode",
-        "name": "primetimenode",
-        "first_name": "",
-        "last_name": "",
-        "nickname": "primetimenode",
-        "url": "",
-        "description": ""
-    }],
-    "featured_media": 326,
-    "parent": 324,
-    "comment_status": "open",
-    "ping_status": "open",
-    "sticky": false,
-    "format": "standard",
-    "categories": [3],
-    "tags": [],
-    "meta": { "_thumbnail_id": "326" },
-    "post_status": null,
-    "_links": {
-        "self": [
-            { "href": "https:\/\/dev-liveblog.wpit.nile.works\/wp-json\/wp\/v2\/posts\/327" }
+        "id": 23,
+        "date": "2016-07-18T19:14:18",
+        "date_gmt": "2016-07-18T19:14:18",
+        "guid": {
+          "rendered": "https://dev-liveblog.wpit.nile.works/sports/?p=23"
+        },
+        "modified": "2016-07-18T19:14:18",
+        "modified_gmt": "2016-07-18T19:14:18",
+        "slug": "test-embeds-for-live-blogs",
+        "type": "post",
+        "link": "https://dev-liveblog.wpit.nile.works/sports/2016/07/18/opening-ceremony/test-embeds-for-live-blogs/",
+        "title": {
+          "rendered": "Test embeds for live blogs"
+        },
+        "content": {
+          "rendered": "<div id=\"fb-root\"></div>\n<p>Adding some oembed code for ANS transformation</p>\n<p>Tweet:</p>\n<blockquote class=\"twitter-tweet\" data-width=\"550\"><p lang=\"en\" dir=\"ltr\">42 sports, over 300 events! The excitement will be everywhere. Get your tickets at <a href=\"https://t.co/3GSHuNaMrY\">https://t.co/3GSHuNaMrY</a><a href=\"https://t.co/wAx6Q6SFOy\">https://t.co/wAx6Q6SFOy</a></p>\n<p>&mdash; Rio 2016 (@Rio2016_en) <a href=\"https://twitter.com/Rio2016_en/status/752631127450398720\">July 11, 2016</a></p></blockquote>\n<p><script async src=\"//platform.twitter.com/widgets.js\" charset=\"utf-8\"></script></p>\n<p>Facebook Photo:</p>\n<div class=\"wef-measure\" style=\"max-width: 450px;\"></div>\n<div class=\"fb-post\" data-href=\"https://www.facebook.com/rio2016/posts/1206896712678539\" data-width=\"450\" ></div>\n<p>Youtube Video:</p>\n<p><iframe width=\"840\" height=\"473\" src=\"https://www.youtube.com/embed/lFIIMEe2Ht0?feature=oembed\" frameborder=\"0\" allowfullscreen></iframe></p>\n<p>Vimeo Video:</p>\n<p><iframe src=\"https://player.vimeo.com/video/34464900\" width=\"840\" height=\"473\" frameborder=\"0\" title=\"Rio 2016 Multisensory Paralympic Brand\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></p>\n<p>Instagram Photo:</p>\n<blockquote class=\"instagram-media\" data-instgrm-captioned data-instgrm-version=\"7\" style=\" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);\"><div style=\"padding:8px;\">\n<div style=\" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;\">\n<div style=\" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;\"></div>\n</div>\n<p style=\" margin:8px 0 0 0; padding:0 4px;\"> <a href=\"https://www.instagram.com/p/BH5tp6bgf_W/\" style=\" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;\" target=\"_blank\">Carlos Sviatowski desde cedo sentiu que podia ajudar a comunidade onde mora e assim começou a distribuir lanches em uma instituição beneficente do seu bairro. Mas isso não era suficiente para a vontade de ajudar que Carlos sentia e ele foi além: viu nas crianças o futuro do nosso país e começou a dar aulas de civismo e cidadania para elas! 😀 Com o tempo e sua ajuda, a comunidade foi mudando e a instituição crescendo, podendo acolher cada vez mais crianças. o/ Alguém que transformou uma comunidade e tocou tantas vidas durante o tempo, merece carregar a #chamaquetransforma! E foi isso que o Carlos fez hoje: conduziu a Tocha Olímpica, indicado pelo seu filho Cássio, na campanha do @Bradesco. &lt;3 #Rio2016 #ChamaOlímpica</a></p>\n<p style=\" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;\">A photo posted by Rio 2016 (@rio2016) on <time style=\" font-family:Arial,sans-serif; font-size:14px; line-height:17px;\" datetime=\"2016-07-16T00:11:39+00:00\">Jul 15, 2016 at 5:11pm PDT</time></p>\n</div>\n</blockquote>\n<p><script async defer src=\"//platform.instagram.com/en_US/embeds.js\"></script></p>\n<p>Pinterest:</p>\n<p>&nbsp;</p>\n"
+        },
+        "excerpt": {
+          "rendered": "<p>Adding some oembed code for ANS transformation Tweet: 42 sports, over 300 events! The excitement will be everywhere. Get your tickets at https://t.co/3GSHuNaMrYhttps://t.co/wAx6Q6SFOy &mdash; Rio 2016 (@Rio2016_en) July 11, 2016 Facebook Photo: Youtube Video: Vimeo Video: Instagram Photo: Carlos Sviatowski desde cedo sentiu que podia ajudar a comunidade onde mora e assim começou a distribuir lanches &hellip; <a href=\"https://dev-liveblog.wpit.nile.works/sports/2016/07/18/opening-ceremony/test-embeds-for-live-blogs/\" class=\"more-link\">Continue reading<span class=\"screen-reader-text\"> &#8220;Test embeds for live blogs&#8221;</span></a></p>\n"
+        },
+        "author": [
+          {
+            "id": 4,
+            "slug": "primetimenode",
+            "name": "primetimenode",
+            "first_name": "",
+            "last_name": "",
+            "nickname": "primetimenode",
+            "url": "",
+            "description": ""
+          }
         ],
-        "collection": [{ "href": "https:\/\/dev-liveblog.wpit.nile.works\/wp-json\/wp\/v2\/posts" }],
-        "about": [{ "href": "https:\/\/dev-liveblog.wpit.nile.works\/wp-json\/wp\/v2\/types\/post" }],
-        "author": [{ "embeddable": true, "href": "https:\/\/dev-liveblog.wpit.nile.works\/wp-json\/wp\/v2\/users\/4" }],
-        "replies": [{ "embeddable": true, "href": "https:\/\/dev-liveblog.wpit.nile.works\/wp-json\/wp\/v2\/comments?post=327" }],
-        "version-history": [{ "href": "https:\/\/dev-liveblog.wpit.nile.works\/wp-json\/wp\/v2\/posts\/327\/revisions" }],
-        "up": [{ "embeddable": true, "href": "https:\/\/dev-liveblog.wpit.nile.works\/wp-json\/wp\/v2\/posts\/324" }],
-        "wp:featuredmedia": [{ "embeddable": true, "href": "https:\/\/dev-liveblog.wpit.nile.works\/wp-json\/wp\/v2\/media\/326" }],
-        "wp:attachment": [{ "href": "https:\/\/dev-liveblog.wpit.nile.works\/wp-json\/wp\/v2\/media?parent=327" }],
-        "wp:term": [
-            { "taxonomy": "category", "embeddable": true, "href": "https:\/\/dev-liveblog.wpit.nile.works\/wp-json\/wp\/v2\/categories?post=327" },
-            { "taxonomy": "post_tag", "embeddable": true, "href": "https:\/\/dev-liveblog.wpit.nile.works\/wp-json\/wp\/v2\/tags?post=327" }
+        "featured_media": 0,
+        "parent": 3,
+        "comment_status": "closed",
+        "ping_status": "closed",
+        "sticky": false,
+        "format": "standard",
+        "categories": [
+          2
         ],
-        "curies": [{ "name": "wp", "href": "https:\/\/api.w.org\/{rel}", "templated": true }]
-    }
-}
+        "tags": [],
+        "meta": {
+          "_edit_lock": "1468869259:4",
+          "_edit_last": "4",
+          "_oembed_e8dcc16fc37e37c8372b44881d03559b": "<blockquote class=\"twitter-tweet\" data-width=\"550\"><p lang=\"en\" dir=\"ltr\">42 sports, over 300 events! The excitement will be everywhere. Get your tickets at <a href=\"https://t.co/3GSHuNaMrY\">https://t.co/3GSHuNaMrY</a><a href=\"https://t.co/wAx6Q6SFOy\">https://t.co/wAx6Q6SFOy</a></p>&mdash; Rio 2016 (@Rio2016_en) <a href=\"https://twitter.com/Rio2016_en/status/752631127450398720\">July 11, 2016</a></blockquote><script async src=\"//platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>",
+          "_oembed_time_e8dcc16fc37e37c8372b44881d03559b": "1468868452",
+          "_oembed_e3784c0df5826a3f56216a0b886f8a03": "<iframe width=\"840\" height=\"473\" src=\"https://www.youtube.com/embed/lFIIMEe2Ht0?feature=oembed\" frameborder=\"0\" allowfullscreen></iframe>",
+          "_oembed_time_e3784c0df5826a3f56216a0b886f8a03": "1468868686",
+          "_oembed_bfd3e12bbe7cfad6911356a823673300": "<iframe src=\"https://player.vimeo.com/video/34464900\" width=\"840\" height=\"473\" frameborder=\"0\" title=\"Rio 2016 Multisensory Paralympic Brand\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>",
+          "_oembed_time_bfd3e12bbe7cfad6911356a823673300": "1468868850",
+          "_oembed_c96ac9988874bb7c20603c0c3f02ae0b": "<blockquote class=\"instagram-media\" data-instgrm-captioned data-instgrm-version=\"7\" style=\" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);\"><div style=\"padding:8px;\"> <div style=\" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;\"> <div style=\" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;\"></div></div> <p style=\" margin:8px 0 0 0; padding:0 4px;\"> <a href=\"https://www.instagram.com/p/BH5tp6bgf_W/\" style=\" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;\" target=\"_blank\">Carlos Sviatowski desde cedo sentiu que podia ajudar a comunidade onde mora e assim começou a distribuir lanches em uma instituição beneficente do seu bairro. Mas isso não era suficiente para a vontade de ajudar que Carlos sentia e ele foi além: viu nas crianças o futuro do nosso país e começou a dar aulas de civismo e cidadania para elas! 😀 Com o tempo e sua ajuda, a comunidade foi mudando e a instituição crescendo, podendo acolher cada vez mais crianças. o/ Alguém que transformou uma comunidade e tocou tantas vidas durante o tempo, merece carregar a #chamaquetransforma! E foi isso que o Carlos fez hoje: conduziu a Tocha Olímpica, indicado pelo seu filho Cássio, na campanha do @Bradesco. &lt;3 #Rio2016 #ChamaOlímpica</a></p> <p style=\" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;\">A photo posted by Rio 2016 (@rio2016) on <time style=\" font-family:Arial,sans-serif; font-size:14px; line-height:17px;\" datetime=\"2016-07-16T00:11:39+00:00\">Jul 15, 2016 at 5:11pm PDT</time></p></div></blockquote><script async defer src=\"//platform.instagram.com/en_US/embeds.js\"></script>",
+          "_oembed_time_c96ac9988874bb7c20603c0c3f02ae0b": "1468868965",
+          "_oembed_7fd70e69b914cd412662ddcdb3e889f1": "{{unknown}}",
+          "_encloseme": "1"
+        },
+        "post_status": null,
+        "site_id": 17,
+        "_links": {
+          "self": [
+            {
+              "href": "https://dev-liveblog.wpit.nile.works/sports/wp-json/wp/v2/posts/23"
+            }
+          ],
+          "collection": [
+            {
+              "href": "https://dev-liveblog.wpit.nile.works/sports/wp-json/wp/v2/posts"
+            }
+          ],
+          "about": [
+            {
+              "href": "https://dev-liveblog.wpit.nile.works/sports/wp-json/wp/v2/types/post"
+            }
+          ],
+          "author": [
+            {
+              "embeddable": true,
+              "href": "https://dev-liveblog.wpit.nile.works/sports/wp-json/wp/v2/users/4"
+            }
+          ],
+          "replies": [
+            {
+              "embeddable": true,
+              "href": "https://dev-liveblog.wpit.nile.works/sports/wp-json/wp/v2/comments?post=23"
+            }
+          ],
+          "version-history": [
+            {
+              "href": "https://dev-liveblog.wpit.nile.works/sports/wp-json/wp/v2/posts/23/revisions"
+            }
+          ],
+          "up": [
+            {
+              "embeddable": true,
+              "href": "https://dev-liveblog.wpit.nile.works/sports/wp-json/wp/v2/posts/3"
+            }
+          ],
+          "wp:attachment": [
+            {
+              "href": "https://dev-liveblog.wpit.nile.works/sports/wp-json/wp/v2/media?parent=23"
+            }
+          ],
+          "wp:term": [
+            {
+              "taxonomy": "category",
+              "embeddable": true,
+              "href": "https://dev-liveblog.wpit.nile.works/sports/wp-json/wp/v2/categories?post=23"
+            },
+            {
+              "taxonomy": "post_tag",
+              "embeddable": true,
+              "href": "https://dev-liveblog.wpit.nile.works/sports/wp-json/wp/v2/tags?post=23"
+            }
+          ],
+          "curies": [
+            {
+              "name": "wp",
+              "href": "https://api.w.org/{rel}",
+              "templated": true
+            }
+          ]
+        }
+      }

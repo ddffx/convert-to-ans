@@ -37,7 +37,9 @@ describe(' Parse html into ans format ', function() {
             let res_src = dir+'/' + cnt_file + '-ans.json';
             let cnt = fs.readFileSync(cnt_src, 'utf8');
             debuglog(cnt);
+            
             let res = JSON.parse(fs.readFileSync(res_src, 'utf8'));
+            // console.log(res);
             let parsed = parsers[parser].parse(cnt);
             // console.log(parsed);
             expect(parsed).to.deep.equal(res);
