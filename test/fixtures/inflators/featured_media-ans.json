@@ -10,5 +10,25 @@
     "copyright":"",
     "type": "image",
     "mime_type": "image/jpeg",
-    "credit":""
+    "credit":"",
+    "sizes": {
+             "full": {
+               "height": 480,
+               "mime_type": "image/jpeg",
+               "source_url": "https://dev-liveblog.wpit.nile.works/wp-content/uploads/2016/07/ptime_test_img_1467839380916.jpeg",
+               "width": 800
+             },
+             "medium": {
+               "height": 180,
+               "mime_type": "image/jpeg",
+               "source_url": "https://dev-liveblog.wpit.nile.works/wp-content/uploads/2016/07/ptime_test_img_1467839380916-300x180.jpeg",
+               "width": 300
+             },
+             "thumbnail": {
+               "height": 150,
+               "mime_type": "image/jpeg",
+               "source_url": "https://dev-liveblog.wpit.nile.works/wp-content/uploads/2016/07/ptime_test_img_1467839380916-150x150.jpeg",
+               "width": 150
+             }
+           }
 }]}
