@@ -86,7 +86,7 @@ const _prepareResult = (payload, opts, cb) => {
 
     // update ombeds in the content elements are copying them form meta section
     if (payload.meta) {
-        
+
         result['content_elements'] = helpers.replaceOembeds(result['content_elements'], payload.meta);
     }
 
@@ -113,9 +113,11 @@ exports.parse = (payload, opts, cb) => {
         // inflate authors, returns all authors of the content in an array
         async.apply(inflators['author'].inflate, payload),
         // inflate featured media
-        async.apply(inflators['featured_media'].inflate, payload)
+        async.apply(inflators['featured_media'].inflate, payload),
+        // inflate header media
+        async.apply(inflators['header_media'].inflate, payload)
     ], (err, results) => {
-        let output, authors, featured_media;
+        let output, authors, featured_media, header_media;
         if (err) {
             cb(err, null);
         } else {
@@ -123,14 +125,25 @@ exports.parse = (payload, opts, cb) => {
             output = _.find(results, 'headlines');
             authors = _.find(results, 'authors');
             featured_media = _.find(results, 'featured_media');
+            header_media = _.find(results, 'header_media');
             if (authors) {
                 console.log('attaching authors in transform');
                 output['credits'] = [authors];
+            } else {
+                console.log('authors not found, not included in transform');
             }
 
             if (featured_media) {
                 console.log('attaching featured media in transform');
                 _.assign(output, featured_media);
+            } else {
+                console.log('featured media not found, not included in transform');
+            }
+            if (header_media) {
+                console.log('attaching header media in transform');
+                _.assign(output, header_media);
+            } else {
+                console.log('header media not found, not included in transform');
             }
             debuglog(output);
             return cb(null, output);

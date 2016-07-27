@@ -1,0 +1,56 @@
+{
+    "header_media": [
+        { 
+            "created_date": "2016-07-25T21:13:50", 
+            "last_updated_date": "2016-07-25T21:13:50", 
+            "title": "Screen Shot 2016-07-25 at 5.13.20 PM", 
+            "copyright": "", 
+            "credit": "", 
+            "type": "image", 
+            "cms_guid": "https://dev-liveblog.wpit.nile.works/olympics/wp-json/wp/v2/media/6", 
+            "sizes": { 
+                "thumbnail": { 
+                    "width": 150, 
+                    "height": 81, 
+                    "mime_type": "image/png", 
+                    "source_url": "https://dev-liveblog.wpit.nile.works/olympics/wp-content/uploads/sites/23/2016/07/Screen-Shot-2016-07-25-at-5.13.20-PM-150x81.png" 
+                }, 
+                "full": { 
+                    "width": 260, 
+                    "height": 81, 
+                    "mime_type": 
+                    "image/png", 
+                    "source_url": "https://dev-liveblog.wpit.nile.works/olympics/wp-content/uploads/sites/23/2016/07/Screen-Shot-2016-07-25-at-5.13.20-PM.png" 
+                } 
+            }, 
+            "caption": "", 
+            "mime_type": "image/png", 
+            "version": "" 
+        }, { 
+            "created_date": "2016-07-27T16:02:09", 
+            "last_updated_date": "2016-07-27T16:02:09", 
+            "title": "Screen Shot 2016-07-27 at 12.01.49 PM", 
+            "copyright": "", 
+            "credit": "", 
+            "type": "image", 
+            "cms_guid": "https://dev-liveblog.wpit.nile.works/olympics/wp-json/wp/v2/media/73", 
+            "sizes": { 
+                "thumbnail": { 
+                    "width": 150, 
+                    "height": 81, 
+                    "mime_type": "image/png", 
+                    "source_url": "https://dev-liveblog.wpit.nile.works/olympics/wp-content/uploads/sites/23/2016/07/Screen-Shot-2016-07-27-at-12.01.49-PM-150x81.png" 
+                }, 
+                "full": { 
+                    "width": 250, 
+                    "height": 81, 
+                    "mime_type": "image/png", 
+                    "source_url": "https://dev-liveblog.wpit.nile.works/olympics/wp-content/uploads/sites/23/2016/07/Screen-Shot-2016-07-27-at-12.01.49-PM.png" 
+                } 
+            }, 
+            "caption": "", 
+            "mime_type": "image/png", 
+            "version": "" 
+        }
+    ]
+}
