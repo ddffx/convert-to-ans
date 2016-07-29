@@ -1,0 +1,8 @@
+{
+    "type": "text",
+    "content": "test 123",
+    "additional_properties": {
+        "id": "456",
+        "style": "color:red;"
+    }
+}
