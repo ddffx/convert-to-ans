@@ -30,9 +30,15 @@ const _parseHtml = content => {
             // assign a local unique id
             out._id = _.uniqueId();
             return out;
+        } else {
+            // console.log('no parsed content for:' + elem);
+            return null;
         }
 
     });
+    // remove null or undefined objects for blank / filtered content
+    mapped = _.filter(mapped, function(obj) {
+        return !_.isEmpty(obj);});
     // console.log(mapped);
     return mapped;
 };
