@@ -1,0 +1,27 @@
+{
+    "featured_media": [{
+        "title": "Screen Shot 2016-07-27 at 12.01.49 PM",
+        "version": "",
+        "caption": "",
+        "created_date": "2016-07-27T16:02:09",
+        "last_updated_date": "2016-07-27T16:02:09",
+        "copyright": "",
+        "type": "image",
+        "mime_type": "image/png",
+        "credit": "",
+        "sizes": {
+            "full": {
+                "height": 81,
+                "mime_type": "image/png",
+                "source_url": "https://dev-liveblog.wpit.nile.works/olympics/wp-content/uploads/sites/23/2016/07/Screen-Shot-2016-07-27-at-12.01.49-PM.png",
+                "width": 250
+            },
+            "thumbnail": {
+                "width": 150,
+                "height": 81,
+                "mime_type": "image/png",
+                "source_url": "https://dev-liveblog.wpit.nile.works/olympics/wp-content/uploads/sites/23/2016/07/Screen-Shot-2016-07-27-at-12.01.49-PM-150x81.png"
+            }
+        }
+    }]
+}
