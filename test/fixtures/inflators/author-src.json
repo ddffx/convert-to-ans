@@ -4,5 +4,16 @@
             "embeddable": true,
             "href": "https://dev-liveblog.wpit.nile.works/olympics/wp-json/wp/v2/users/1"
         }]
-    }
+    },
+    "author": [{
+        "id": 1,
+        "slug": "dev_admin",
+        "name": "dev_admin",
+        "first_name": "",
+        "last_name": "",
+        "nickname": "dev_admin",
+        "url": "",
+        "description": ""
+    }]
+
 }

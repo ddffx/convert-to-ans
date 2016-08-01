@@ -7,8 +7,6 @@ const debuglog = util.debuglog('ans');
 const bulk = require('bulk-require');
 
 const lib_i = bulk(__dirname + '/lib', ['inflators/**/*.js', '**/*.js']);
-
-
 const inflators = lib_i.inflators;
 const lib_h = bulk(__dirname + '/lib', ['helpers/**/*.js', '**/*.js']);
 const helpers = lib_h.helpers;
