@@ -1,0 +1,33 @@
+{
+    "header_media": [{
+        "caption": "",
+        "copyright": "",
+        "created_date": "2016-07-29T19:12:52",
+        "credit": "",
+        "last_updated_date": "2016-07-29T19:12:52",
+        "mime_type": "image/png",
+        "sizes": {
+            "full": {
+                "height": 1001,
+                "mime_type": "image/png",
+                "source_url": "https://s3.amazonaws.com/wapo-wordpress-dev/liveblog/wp-content/uploads/sites/23/2016/07/29191252/Rio2016-sig-RioSig2016.png",
+                "width": 1001
+            },
+            "medium": {
+                "height": 300,
+                "mime_type": "image/png",
+                "source_url": "https://s3.amazonaws.com/wapo-wordpress-dev/liveblog/wp-content/uploads/sites/23/2016/07/29191252/Rio2016-sig-RioSig2016-300x300.png",
+                "width": 300
+            },
+            "thumbnail": {
+                "height": 150,
+                "mime_type": "image/png",
+                "source_url": "https://s3.amazonaws.com/wapo-wordpress-dev/liveblog/wp-content/uploads/sites/23/2016/07/29191252/Rio2016-sig-RioSig2016-150x150.png",
+                "width": 150
+            }
+        },
+        "title": "Rio2016-sig-RioSig2016",
+        "type": "image",
+        "version": ""
+    }]
+}
