@@ -85,6 +85,11 @@ const _prepareResult = (payload, opts, cb) => {
     if (payload.meta) {
         _.assign(result, helpers.selectParser('meta').parse(payload));
     }
+    // include blog_section in transformed content, used for commercial node and potentially other purposes
+    if(payload.blog_section){
+        result['blog_section'] = payload.blog_section;
+        result['commercial_node'] = payload.blog_section;
+    }
     // parse payload body
     result['content_elements'] = _parseHtml(payload.content.rendered);
 
