@@ -2,18 +2,11 @@
     "authors": [{
         "id": 1,
         "name": "dev_admin",
+        "first_name": "",
+        "last_name": "",
+        "nickname": "dev_admin",
         "url": "",
         "description": "",
-        "link": "https:\/\/dev-liveblog.wpit.nile.works\/olympics\/author\/dev_admin\/",
-        "slug": "dev_admin",
-        "avatar_urls": {
-            "24": "https:\/\/secure.gravatar.com\/avatar\/e63d89729435d7f9782015f15a5dfbd3?s=24&d=mm&r=g",
-            "48": "https:\/\/secure.gravatar.com\/avatar\/e63d89729435d7f9782015f15a5dfbd3?s=48&d=mm&r=g",
-            "96": "https:\/\/secure.gravatar.com\/avatar\/e63d89729435d7f9782015f15a5dfbd3?s=96&d=mm&r=g"
-        },
-        "_links": {
-            "self": [{ "href": "https:\/\/dev-liveblog.wpit.nile.works\/olympics\/wp-json\/wp\/v2\/users\/1" }],
-            "collection": [{ "href": "https:\/\/dev-liveblog.wpit.nile.works\/olympics\/wp-json\/wp\/v2\/users" }]
-        }
+        "slug": "dev_admin"
     }]
 }
