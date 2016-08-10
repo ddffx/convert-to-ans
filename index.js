@@ -36,7 +36,8 @@ const _parseHtml = content => {
     });
     // remove null or undefined objects for blank / filtered content
     mapped = _.filter(mapped, function(obj) {
-        return !_.isEmpty(obj);});
+        return !_.isEmpty(obj);
+    });
     // console.log(mapped);
     return mapped;
 };
@@ -86,8 +87,15 @@ const _prepareResult = (payload, opts, cb) => {
         _.assign(result, helpers.selectParser('meta').parse(payload));
     }
     // include blog_section in transformed content, used for commercial node and potentially other purposes
-    if(payload.blog_section){
-        result['blog_section'] = payload.blog_section;
+    if (payload.blog_section) {
+        let section_obj = helpers.parseSection(payload.blog_section);
+        if (section_obj) {
+            result['blog_section'] = section_obj.section;
+            if (section_obj.sub_section) {
+                result['blog_subsection'] = section_obj.sub_section;
+            }
+        }
+
         result['commercial_node'] = payload.blog_section;
     }
     // parse payload body
