@@ -1,31 +1,31 @@
 { "featured_media": [{
-	"title": "ptime_test_img_1467839380916",
+	"title": "Ana Clara Do Amaral",
 	"version":"",
-    "caption": "",
-    "created_date":"2016-07-06T21:09:42",
-    "last_updated_date":"2016-07-06T21:09:42",
-    "copyright":"",
+    "caption": "Ana Clara Do Amaral, of Sao Paulo, Brazil, hangs from the Olympic Rings while posing for a photograph at the Olympic Park ahead of the 2016 Summer Olympics in Rio de Janeiro, Brazil, Friday, Aug. 5, 2016. (AP Photo/Julio Cortez)",
+    "created_date": "2016-08-05T15:15:20",
+    "last_updated_date": "2016-08-05T15:15:20",
+    "copyright": "Copyright 2016 The Associated Press. All rights reserved. This material may not be published, broadcast, rewritten or redistribu",
     "type": "image",
     "mime_type": "image/jpeg",
-    "credit":"",
-    "source_url": "https://dev-liveblog.wpit.nile.works/wp-content/uploads/2016/07/ptime_test_img_1467839380916.jpeg",
+    "credit": "AP",
+    "source_url": "https://s3.amazonaws.com/arc-washpost-wordpress-uploads/primetime/wp-content/uploads/sites/3/2016/08/05151523/Rio_Olympics-7e428.jpg",
     "sizes": {
              "full": {
-               "height": 480,
+               "height": 3006,
                "mime_type": "image/jpeg",
-               "source_url": "https://dev-liveblog.wpit.nile.works/wp-content/uploads/2016/07/ptime_test_img_1467839380916.jpeg",
-               "width": 800
+               "source_url": "https://s3.amazonaws.com/arc-washpost-wordpress-uploads/primetime/wp-content/uploads/sites/3/2016/08/05151523/Rio_Olympics-7e428.jpg",
+               "width": 4382
              },
              "medium": {
-               "height": 180,
+               "height": 206,
                "mime_type": "image/jpeg",
-               "source_url": "https://dev-liveblog.wpit.nile.works/wp-content/uploads/2016/07/ptime_test_img_1467839380916-300x180.jpeg",
+               "source_url": "https://s3.amazonaws.com/arc-washpost-wordpress-uploads/primetime/wp-content/uploads/sites/3/2016/08/05151523/Rio_Olympics-7e428-300x206.jpg",
                "width": 300
              },
              "thumbnail": {
                "height": 150,
                "mime_type": "image/jpeg",
-               "source_url": "https://dev-liveblog.wpit.nile.works/wp-content/uploads/2016/07/ptime_test_img_1467839380916-150x150.jpeg",
+               "source_url": "https://s3.amazonaws.com/arc-washpost-wordpress-uploads/primetime/wp-content/uploads/sites/3/2016/08/05151523/Rio_Olympics-7e428-150x150.jpg",
                "width": 150
              }
            }
