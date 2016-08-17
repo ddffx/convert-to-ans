@@ -1,0 +1,6 @@
+{
+    "type": "oembed",
+    "providerUrl": "https://www.washingtonpost.com",
+    "objectUrl":"https://www.washingtonpost.com/posttv/oembed/videos?uuid=3631a456-5f01-11e6-84c1-6d27287896b5",
+    "raw_html": "<div class=\"posttv-video-embed wpv-player\" data-uuid=\"3631a456-5f01-11e6-84c1-6d27287896b5\" data-object-id=\"57ab30d2e4b0489c5a473e19\" data-youtube-id=\"\" data-is-truth-teller=\"0\" data-max-width=\"-1\" data-max-height=\"-1\" data-show-endscreen=\"1\" data-show-promo=\"http://s3.amazonaws.com/posttv-thumbnails-prod/08-10-2016/t_1470836969086_name_phelps_0810.jpg\" data-headline=\"Here are all of Michael Phelps's 25 Olympic medals\" data-duration=\"98000\" data-category-id=\"segments\" data-aspect-ratio=\"0.5625\" data-video-360=\"0\" data-variants=\"0\" data-show-caption=\"1\">  </div>"
+}
