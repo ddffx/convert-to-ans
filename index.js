@@ -83,7 +83,7 @@ const _prepareResult = (payload, opts, cb) => {
     if (payload.modified) {
         result['last_updated_date'] = payload.modified;
     }
-    if (payload.meta) {
+    if (payload.meta && helpers.selectParser('meta')) {
         _.assign(result, helpers.selectParser('meta').parse(payload));
     }
     // include blog_section in transformed content, used for commercial node and potentially other purposes
@@ -97,6 +97,10 @@ const _prepareResult = (payload, opts, cb) => {
         }
 
         result['commercial_node'] = payload.blog_section;
+    }
+    // add tracking object if it is there 
+    if(payload.tracking && helpers.selectParser('tracking')){
+        _.assign(result, helpers.selectParser('tracking').parse(payload))
     }
     // parse payload body
     result['content_elements'] = _parseHtml(payload.content.rendered);
