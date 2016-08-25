@@ -98,9 +98,10 @@ const _prepareResult = (payload, opts, cb) => {
 
         result['commercial_node'] = payload.blog_section;
     }
-    // add tracking object if it is there 
-    if(payload.tracking && helpers.selectParser('tracking')){
-        _.assign(result, helpers.selectParser('tracking').parse(payload))
+    // add tracking object
+    if(helpers.selectParser('tracking')){
+        // includes the already available tracking object, if not then constructs one
+        _.assign(result, helpers.selectParser('tracking').parse(payload));
     }
     // parse payload body
     result['content_elements'] = _parseHtml(payload.content.rendered);
