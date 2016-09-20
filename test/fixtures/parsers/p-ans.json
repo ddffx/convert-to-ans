@@ -1,6 +1,6 @@
 {
 	"type": "text",
-	"content":"Some Text in the paragraph <a href=\"http://www.washingtonpost.com\">WaPo</a> © The Washington Post, & test content ≠ try, <span style=\"font-weight:bold\">Hello</span>",
+	"content":"Some <em>Text</em> in the paragraph <a href=\"http://www.washingtonpost.com\">WaPo</a> © The Washington Post, & test content ≠ try, <span style=\"font-weight:bold\">Hello</span> <small>small text</small>",
 	"additional_properties": {
 		"class": "test",
 		"id": "1234"
