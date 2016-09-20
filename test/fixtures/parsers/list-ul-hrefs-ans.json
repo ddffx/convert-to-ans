@@ -1,0 +1,35 @@
+{
+    "list_type": "unordered_list",
+    "additional_properties": {
+        "class": "hello",
+        "id": "world"
+    },
+    "items": [
+
+        {
+            "additional_properties": {
+            	"class": "test",
+            	"id": "2345"
+            },
+            "content": "<a href=\"http://twitter.com/mikejoneswapo\" target=\"_blank\">@MikeJonesWaPo</a>",
+            "type": "text"
+        }, {
+            "content": "<a href=\"http://twitter.com/lizclarketweet\" target=\"_blank\">@lizclarketweet</a>",
+            "type": "text"
+        }, {
+            "content": "<a href=\"https://twitter.com/MasterTes\" target=\"_blank\">@MasterTes</a>",
+            "type": "text"
+        }, {
+            "content": "<a href=\"https://twitter.com/dcsportsbog\" target=\"_blank\">@dcsportsbog</a>",
+            "type": "text"
+        }, {
+            "content": "<a href=\"https://twitter.com/jerrybrewer\" target=\"_blank\">@JerryBrewer</a>",
+            "type": "text"
+        },
+        {
+        	"content": "<a href=\"https://twitter.com/insider\" target=\"_blank\">@Insider</a>",
+        	"type": "text"
+        }
+
+    ]
+}

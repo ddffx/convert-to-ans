@@ -7,23 +7,18 @@
     "items": [
 
         {
-            "additional_properties": {},
-            "content": "1",
+            "content": "Hello <em>World</em>",
             "type": "text"
         }, {
-            "additional_properties": {},
-            "content": "a",
+            "content": "<small>abc</small> 1234",
             "type": "text"
         }, {
-            "additional_properties": {},
             "content": "2",
             "type": "text"
         }, {
-            "additional_properties": {},
             "content": "3",
             "type": "text"
         }, {
-            "additional_properties": {},
             "content": "b",
             "type": "text"
         }

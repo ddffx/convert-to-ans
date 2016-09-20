@@ -6,24 +6,19 @@
     "items": [
 
         {
-            "additional_properties": {},
             "content": "1",
             "type": "text"
         }, {
-            "additional_properties": {},
             "content": "a",
             "type": "text"
         } ,{
-            "additional_properties": {},
             "content": "2",
             "type": "text"
         } ,{
-            "additional_properties": {},
             "content": "3",
             "type": "text"
         }, {
-            "additional_properties": {},
-            "content": "b",
+            "content": "bob <i>b</i> bobblehead",
             "type": "text"
         }
 
