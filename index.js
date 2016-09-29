@@ -11,7 +11,7 @@ const inflators = lib_i.inflators;
 const lib_h = bulk(__dirname + '/lib', ['helpers/**/*.js', '**/*.js']);
 const helpers = lib_h.helpers;
 // console.log(helpers);
-const _parseHtml = content => {
+const _parseHtml = (content, post_uid) => {
     content = content.replace(/\n/gi, ''); // remove new lines;
     // replace blank p tags
 
@@ -26,7 +26,7 @@ const _parseHtml = content => {
         out = parser.parse(elem);
         if (out) {
             // assign a local unique id
-            out._id = _.uniqueId();
+            out._id = _.isEmpty(post_uid) ? _.uniqueId() : post_uid + '_' + _.uniqueId();
             return out;
         } else {
             // console.log('no parsed content for:' + elem);
@@ -99,12 +99,12 @@ const _prepareResult = (payload, opts, cb) => {
         result['commercial_node'] = payload.blog_section;
     }
     // add tracking object
-    if(helpers.selectParser('tracking')){
+    if (helpers.selectParser('tracking')) {
         // includes the already available tracking object, if not then constructs one
         _.assign(result, helpers.selectParser('tracking').parse(payload));
     }
     // parse payload body
-    result['content_elements'] = _parseHtml(payload.content.rendered);
+    result['content_elements'] = _parseHtml(payload.content.rendered, payload.cms_uid || '');
 
     // update ombeds in the content elements are copying them form meta section
     if (payload.meta) {
