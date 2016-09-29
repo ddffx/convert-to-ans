@@ -16,7 +16,7 @@ const _parseHtml = (content, post_uid) => {
     // replace blank p tags
 
     // console.log(content);
-    let elems = cheerio.parseHTML(content);
+    let elems = cheerio.parseHTML(content, true); // keep the script tags
     // console.log(elems);
     let mapped = _.map(elems, function(elem) {
         let out, parser;
