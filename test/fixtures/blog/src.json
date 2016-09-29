@@ -31,6 +31,10 @@
     }],
     "featured_media": 0,
     "parent": 3,
+    "attributes": {
+        "cms_uid": "primetime-dev-3-2275",
+        "parent_cms_uid": "primetime-dev-3-2256"
+    },
     "comment_status": "closed",
     "ping_status": "closed",
     "sticky": false,
