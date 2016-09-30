@@ -43,6 +43,12 @@
         2
     ],
     "blog_section": "sports/olympics/latest",
+    "cms_uid": "primetime-dev-3-2275",
+    "attributes": {
+        "cms_uid": "primetime-dev-3-2275",
+        "parent_cms_uid": "primetime-dev-3-2256",
+        "parent_slug": "bens-awesome-live-blog"
+    },
     "tags": [],
     "meta": {
         "_edit_lock": "1468869259:4",

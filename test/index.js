@@ -102,7 +102,7 @@ describe(' Parse Content, ansParser.parse() ', function() {
                 done();
             } else {
                 // expect(result).to.be.jsonSchema(schemaDef);
-                // console.log(result);
+                console.log(result);
                 // console.log(result.credits[0].authors);
                 expect(result).to.be.an('object');
                 done();

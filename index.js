@@ -73,7 +73,7 @@ const _prepareResult = (payload, opts, cb) => {
     }
     // parse title
     if (payload.title) {
-        // _.assign(result, _parseTitle(payload)); // will be depricate
+        // _.assign(result, _parseTitle(payload)); // will be depricated
         _.assign(result, helpers.selectParser('headlines').parse(payload));
     }
     // dates
@@ -102,6 +102,11 @@ const _prepareResult = (payload, opts, cb) => {
     if (helpers.selectParser('tracking')) {
         // includes the already available tracking object, if not then constructs one
         _.assign(result, helpers.selectParser('tracking').parse(payload));
+    }
+
+    // add parent slug reading from attributes collection
+    if(payload.attributes && !_.isEmpty(payload.attributes.parent_slug)){
+        result['parent_slug'] = payload.attributes.parent_slug;
     }
     // parse payload body
     result['content_elements'] = _parseHtml(payload.content.rendered, payload.cms_uid || '');
