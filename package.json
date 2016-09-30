@@ -1,6 +1,6 @@
 {
   "name": "convert-to-ans",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Node module for converting html content to ANS (Arc Native Content) format",
   "main": "index.js",
   "scripts": {
