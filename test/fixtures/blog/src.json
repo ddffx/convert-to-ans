@@ -33,7 +33,12 @@
     "parent": 3,
     "attributes": {
         "cms_uid": "primetime-dev-3-2275",
-        "parent_cms_uid": "primetime-dev-3-2256"
+        "parent_cms_uid": "primetime-dev-3-2256",
+        "canonical_url": "https://primetime.washpost.arcpublishing.com/local/2017/live-updates/politics/live-coverage-of-trumps-inauguration/faa-reminds-people-to-leave-the-drones-at-home/",
+        "parent_slug": "live-coverage-of-trumps-inauguration",
+        "parent_canonical_url": "https://primetime.washpost.arcpublishing.com/local/2017/live-updates/politics/live-coverage-of-trumps-inauguration/",
+        "parent_created_date": "2017-01-20T13:39:18"
+
     },
     "comment_status": "closed",
     "ping_status": "closed",
