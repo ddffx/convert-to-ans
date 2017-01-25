@@ -104,9 +104,13 @@ const _prepareResult = (payload, opts, cb) => {
         _.assign(result, helpers.selectParser('tracking').parse(payload));
     }
 
-    // add parent slug reading from attributes collection
+    // add parent slug reading from attributes collection, depraceated, this moves inside *attributes* object
     if(payload.attributes && !_.isEmpty(payload.attributes.parent_slug)){
         result['parent_slug'] = payload.attributes.parent_slug;
+    }
+    // pass all attributes
+    if(payload.attributes){
+       result['backend_attrs'] = payload.attributes;
     }
     // parse payload body
     result['content_elements'] = _parseHtml(payload.content.rendered, payload.cms_uid || '');
